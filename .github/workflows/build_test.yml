@@ -20,4 +20,4 @@ jobs:
       run: sudo apt -y install build-essential
     
     - name: build
-      run: make -C ../../
+      run: make
