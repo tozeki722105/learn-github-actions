@@ -1,4 +1,5 @@
-int main(void) {
-    int i;
+int main(void)
+{
+    // int i;
     return 0;
 }
