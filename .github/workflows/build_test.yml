@@ -1,0 +1,23 @@
+name: Build Check
+
+on:
+  pull_request:
+    branch:
+      - '*'
+    workflow_dispatch:
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: update apt-get
+      run: sudo apt-get update
+
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: install-build-essential
+      run: sudo apt -y install build-essential
+    
+    - name: build
+      run: make
